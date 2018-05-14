@@ -18,7 +18,7 @@
     }
     $user = $mysqli->query("SELECT * FROM users WHERE username = '$username' AND password = '$password' LIMIT 1");
     if($user->num_rows>0) {
-      echo 'Usuario loggueado correctamente!';
+      echo 'Usuario loggueado correctamente!  Mysql Host: ' . mysqli_get_host_info($mysqli);
     }
     else {
       echo 'No existe un usuario con esas credenciales!';
